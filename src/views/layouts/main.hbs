@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmegPetShop - Venta de productos para mascotas</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+
+    <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/al.css" rel="stylesheet">
+</head>
+<body class="bg-gay-200">
+
+    <nav class="flex py-5 bg-yellow-400 text-white px-24">
+        <div class="w-1/2 px-12 mr-auto">
+           <h1 class="text-2x1 font-bold"><b><i>OmegaPetShop</i></b></h1>
+        </div>
+
+
+        <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
+            {{#if name}}
+            <li class="nav-item px-4">
+                <p class="font-semibold">{{name}}</p>
+            </li>
+
+
+            <li class="nav-item px-4"> 
+                <a href="/logout" class="nav-link font-semibold bg-red-500 text-white hover:bg-red-600 py-3 px-4 rounded-md">Cerrar Sesión</a>
+            </li>
+            {{else}}
+            <li class="nav-item px-4"> 
+                <a href="/login" class="nav-link font-semibold hover:bg-yellow-500 py-3 px-4 rounded-md"><b>Iniciar Sesión</b></a>
+            </li>
+            <li class="nav-item px-4"> 
+                <a href="/register" class="nav-link font-semibold border-2 border-white hover:bg-white
+                hover:text-yellow-700 py-3 px-4 rounded-md">Registrarse</a>
+            </li>
+            {{/if}}
+        </ul>
+    </nav>
+
+    {{{body}}}
+</body>
+</html>
